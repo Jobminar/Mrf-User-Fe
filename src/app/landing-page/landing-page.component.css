@@ -1,0 +1,21 @@
+.container
+{
+    height: 98vh;
+    width: 100%;
+    align-items: center;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.material-symbols-outlined{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 28px;
+}
+.sub-container{
+    position: relative;
+    /* top: 30%; */
+    /* left: 2%; */
+    /* border: 1px solid black; */
+   
+}

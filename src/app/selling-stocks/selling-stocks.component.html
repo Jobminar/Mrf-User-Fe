@@ -1,0 +1,48 @@
+<div class="container">
+    <span class="material-symbols-outlined" (click)="goBack()">
+        arrow_back
+    </span>&nbsp; <span class="title">Sell Report</span>
+    <br>
+    <br>
+    <div class="sub-container">
+        <form (ngSubmit)="submitForm()">
+            <!-- <div class="input-div">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date"  [(ngModel)]="formData.date" required>
+            </div> -->
+            
+            <div class="input-div">
+            <label for="Customer Name">Customer Name</label>
+            <input type="text" id="Customer Name" name="Customer Name" [(ngModel)]="formData.customerName" required>
+            </div>
+            <div class="input-div">
+            <label for="tyreSize">Tyre Size</label>
+            <input type="text" id="tyreSize" name="tyreSize" [(ngModel)]="formData.tyreSize" required>
+            </div>
+            <div class="input-div">
+            <label for="Quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" [(ngModel)]="formData.quantity" (input)="calculateTotalAmount()" required>
+            </div>
+            
+            <div class="input-div">
+                <label for="pricePerUnit">Price Per Unit</label>
+                <input type="number" id="pricePerUnit" name="pricePerUnit" [(ngModel)]="formData.pricePerUnit" (input)="calculateTotalAmount()" required>
+            </div>
+            <div class="input-div">
+                <label for="totalAmount">Total Amount</label>
+                <input type="number" id="totalAmount" name="totalAmount" [(ngModel)]="formData.totalAmount" required>
+            </div>
+            <div class="input-div">
+                <label for="comment">Comments</label>
+                <textarea id="comment" name="comment" rows="4" cols="50" [(ngModel)]="formData.comment" required></textarea>
+            </div>
+            <div class="button-div">
+                <button type="submit">Submit</button>
+                <button type="reset">clear form</button>
+            </div>
+        </form>
+    </div>
+</div>  
+<div class="loading" *ngIf="loading"> 
+    <mat-spinner></mat-spinner>  
+</div>
